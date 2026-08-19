@@ -52,7 +52,7 @@ def main():
     p.add_argument('--amp', action='store_true')
     args =p.parse_args()
     
-    
+    # gpu or cpu running environment 
     
     args.device = torch.device('cuda' if torch.cuda.is_available() and not args.cpu else 'cpu')
     tok = ByteTokenizer()
